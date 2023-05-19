@@ -1,3 +1,10 @@
-import{insertTodo}from "./db_todo.js"
-let data={Message:"Hiii "};
-insertTodo(data);
+import express from 'express'
+const app = express()
+
+
+app.get("/",(req,res)=>{
+    res.json({message:"heliii"})
+});
+app.listen(3000);
+
+
