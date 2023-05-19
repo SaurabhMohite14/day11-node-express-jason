@@ -6,10 +6,10 @@ const client = new MongoClient(uri);
 
 
 
-async function insertTodo()
+async function insertTodo(data)
 {
     const db = client.db("Project");
-    let data={message:"Hello Mongo!!"};
+    
  let result =await db.collection("todo").insertOne({data});
 
    await client.close();
